@@ -47,7 +47,6 @@ function DraftEmails() {
 
     function openDraftEmail(email) {
         setViewDraftEmail(email)    
-        console.log(viewDraftEmail);
         setModal(true)
     }
 
@@ -77,7 +76,6 @@ function DraftEmails() {
             emailDateTime: currentDateTime,
             isRead: false
         }
-        console.log(sendingEmailDetails);
         axios.post('https://gmail-clone-email-be.onrender.com/newEmail', sendingEmailDetails)
             .then((response) => {
                 setModal(false)
